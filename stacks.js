@@ -1,4 +1,5 @@
 //Stack is a stack of data (think the call stack). The last thing that was added will be on top and therefore the first thing to be removed will be the last thing that was added
+// LIFO: last in first out data structure
 
 class Node {
   constructor(value) {

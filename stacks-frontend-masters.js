@@ -11,7 +11,7 @@ class Stack {
     this._length++;
   }
   pop() {
-    if(!this._length) return null;
+    if(!this._length) return undefined;
     const lastVal = this._storage[this._length - 1];
     delete this._storage[this._length - 1];
     this._length--;

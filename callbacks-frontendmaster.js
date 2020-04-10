@@ -24,7 +24,7 @@ function addS(word) {
 
 // Challenge 3
 function map(array, callback) {
-	let result = [];
+  let result = [];
   for(let i = 0; i < array.length; i++) {
     result.push(callback(array[i]))
   }
@@ -36,7 +36,7 @@ function map(array, callback) {
 
 // Challenge 4
 function forEach(array, callback) {
-	 for(let i = 0; i < array.length; i++) {
+  for(let i = 0; i < array.length; i++) {
     callback(array[i])
   }
 }
@@ -46,8 +46,8 @@ function forEach(array, callback) {
 
 // Challenge 5
 function mapWith(array, callback) {
-	let result = [];
-	array.forEach(i => result.push(callback(i)))
+  let result = [];
+  array.forEach(i => result.push(callback(i)))
   return result;
 }
 
@@ -69,7 +69,7 @@ function reduce(array, callback, initialValue) {
 
 // Challenge 7
 function intersection(args) {
-	let argLen = arguments.length;
+  let argLen = arguments.length;
   let seen = {};
   let result = [];
   let arrays = [].concat(...arguments)
@@ -92,7 +92,7 @@ function intersection(args) {
 // Challenge 8
 function union(arrays) {
   let joined = [].concat(...arguments)
-	let result = [];
+  let result = [];
   for(let i = 0; i < joined.length; i++) {
   	if(!result.includes(joined[i])) {
       result.push(joined[i])
@@ -107,7 +107,7 @@ function union(arrays) {
 
 // Challenge 9
 function objOfMatches(array1, array2, callback) {
-	let obj = {};
+  let obj = {};
   for(let i = 0; i < array1.length; i++) {
     if(callback(array1[i]) === array2[i]){
       obj[array1[i]] = array2[i]
@@ -122,7 +122,7 @@ function objOfMatches(array1, array2, callback) {
 
 // Challenge 10
 function multiMap(arrVals, arrCallbacks) {
-	let obj = {};
+  let obj = {};
   for(let i = 0; i < arrVals.length; i++) {
     obj[arrVals[i]] = [];
     for(let j = 0; j < arrCallbacks.length; j++) {
@@ -138,7 +138,7 @@ function multiMap(arrVals, arrCallbacks) {
 
 // Challenge 11
 function objectFilter(obj, callback) {
-	let result = {};
+  let result = {};
   for(let key in obj) {
     if(callback(obj[key]) === obj[key]) {
       result[key] = obj[key]

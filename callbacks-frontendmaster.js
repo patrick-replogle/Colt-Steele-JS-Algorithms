@@ -255,7 +255,13 @@ function goodKeys(obj, callback) {
 
 // Challenge 17
 function commutative(func1, func2, value) {
-
+  let result1 = func1(value);
+  let result2 = func2(value);
+  
+  if(func2(result1) === func1(result2)) {
+    return true;
+  }
+  return false;
 }
 
 // /*** Uncomment these to check your work! ***/

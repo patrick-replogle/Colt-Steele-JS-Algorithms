@@ -157,7 +157,16 @@ Paris: 'PARIS',
 
 // Challenge 12
 function majority(array, callback) {
-
+  let newArr = [];
+	for(let i = 0; i < array.length; i++) {
+    if(callback(array[i])){
+      newArr.push(array[i])
+    }
+  }
+	if(newArr.length > Math.floor(array.length / 2)) {
+    return true;
+  }
+  return false;
 }
 
 // /*** Uncomment these to check your work! ***/

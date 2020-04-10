@@ -275,7 +275,13 @@ function commutative(func1, func2, value) {
 
 // Challenge 18
 function objFilter(obj, callback) {
-
+  let result = {};
+  for(let key in obj) {
+    if(callback(key) === obj[key]) {
+      result[key] = obj[key]
+    }
+  }
+  return result;
 }
 
 // /*** Uncomment these to check your work! ***/

@@ -4,7 +4,7 @@
 
 // Challenge 1
 function addTwo(num) {
-	return num + 2;
+  return num + 2;
 }
 
 // To check if you've completed it, uncomment these console.logs!
@@ -14,7 +14,7 @@ function addTwo(num) {
 
 // Challenge 2
 function addS(word) {
-	return word + "s"
+  return word + "s"
 }
 
 // uncomment these to check your work

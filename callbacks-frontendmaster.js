@@ -197,7 +197,16 @@ function prioritize(array, callback) {
 
 // Challenge 14
 function countBy(array, callback) {
-
+  let count = {};
+  for(let i = 0; i < array.length; i++) {
+    if(callback(array[i]) === 'even') {
+      count['even'] ? count['even'] += 1 : count['even'] = 1;
+    }
+    if(callback(array[i]) === 'odd') {
+      count['odd'] ? count['odd'] += 1 : count['odd'] = 1;
+    }
+  }
+  return count;
 }
 
 // /*** Uncomment these to check your work! ***/

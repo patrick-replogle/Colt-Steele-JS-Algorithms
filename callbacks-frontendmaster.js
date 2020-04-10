@@ -237,8 +237,15 @@ function groupBy(array, callback) {
 
 // Challenge 16
 function goodKeys(obj, callback) {
-
+  let result = [];
+  for(let key in obj) {
+    if(callback(obj[key])){
+      result.push(key);
+    }
+  }
+  return result;
 }
+
 
 // /*** Uncomment these to check your work! ***/
 // const sunny = { mac: 'priest', dennis: 'calculating', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };

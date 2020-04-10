@@ -218,7 +218,15 @@ function countBy(array, callback) {
 
 // Challenge 15
 function groupBy(array, callback) {
-
+  let obj = {};
+  for (let i = 0; i < array.length; i++) {
+    let key = callback(array[i]);
+    if (obj[key] === undefined) {
+      obj[key] = [];
+    }
+    obj[key].push(array[i]);
+  }
+  return obj;
 }
 
 // /*** Uncomment these to check your work! ***/

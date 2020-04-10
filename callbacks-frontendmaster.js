@@ -177,7 +177,16 @@ function majority(array, callback) {
 
 // Challenge 13
 function prioritize(array, callback) {
-
+  let left = [];
+  let right = [];
+  for(let i = 0; i < array.length; i++) {
+    if(callback(array[i])){
+      left.push(array[i])
+    } else {
+      right.push(array[i])
+    }
+  }
+  return left.concat(right)
 }
 
 // /*** Uncomment these to check your work! ***/

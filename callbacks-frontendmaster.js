@@ -352,7 +352,10 @@ function highestFunc(objOfFuncs, subject) {
 
 // Challenge 22
 function combineOperations(startVal, arrOfFuncs) {
-
+    for(let func of arrOfFuncs) {
+    startVal = func(startVal)
+  }
+  return startVal;
 }
 
 function add100(num) {
@@ -361,6 +364,14 @@ function add100(num) {
 
 function divByFive(num) {
   return num / 5;
+}
+
+function addTen(num) {
+  return num + 10;
+}
+
+function multiplyFive(num) {
+  return num * 5;
 }
 
 function multiplyByThree(num) {

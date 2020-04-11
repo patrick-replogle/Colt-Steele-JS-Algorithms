@@ -385,7 +385,16 @@ function multiplyByThree(num) {
 
 // Challenge 23
 function myFunc(array, callback) {
-
+  let result = [];
+     for(let i = 0; i < array.length; i++) {
+  	result.push(callback(array[i]))
+  }
+  for(let j = 0; j < result.length; j++) {
+    if(result[j] === true) {
+    	return j
+    } 
+  }
+  return -1;
 }
 
 const numbers = [2, 3, 6, 64, 10, 8, 12];

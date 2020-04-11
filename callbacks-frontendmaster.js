@@ -316,7 +316,11 @@ function rating(arrOfFuncs, value) {
 
 // Challenge 20
 function pipe(arrOfFuncs, value) {
-
+  let result = value;
+    for(let func of arrOfFuncs) {
+      result = func(result)
+  }
+  return result;
 }
 
 // /*** Uncomment these to check your work! ***/

@@ -386,13 +386,10 @@ function multiplyByThree(num) {
 // Challenge 23
 function myFunc(array, callback) {
   let result = [];
-     for(let i = 0; i < array.length; i++) {
-  	result.push(callback(array[i]))
-  }
-  for(let j = 0; j < result.length; j++) {
-    if(result[j] === true) {
-    	return j
-    } 
+    for(let i = 0; i < array.length; i++) {
+      if(callback(array[i])) {
+       return i;
+    }
   }
   return -1;
 }

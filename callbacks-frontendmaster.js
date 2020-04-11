@@ -333,7 +333,11 @@ function pipe(arrOfFuncs, value) {
 
 // Challenge 21
 function highestFunc(objOfFuncs, subject) {
-
+  let count = {}
+  for(let func in objOfFuncs) {
+    count[func] = objOfFuncs[func](subject)
+  }
+  return Object.keys(count).reduce((a, b) => count[a] > count[b] ? a : b);
 }
 
 // /*** Uncomment these to check your work! ***/

@@ -3,7 +3,7 @@
 
 // CHALLENGE 1
 function createFunction() {
-	function hello() {
+  function hello() {
     console.log('hello')
   }
   return hello;
@@ -16,7 +16,7 @@ function createFunction() {
 
 // CHALLENGE 2
 function createFunctionPrinter(input) {
-	function printer() {
+  function printer() {
     console.log(input)
   }
   return printer;
@@ -55,7 +55,7 @@ const jasCounter = outer();
 
 
 function addByX(x) {
-	function addBy(num) {
+  function addBy(num) {
     return num + x;
   }
   return addBy;
@@ -77,7 +77,7 @@ const addByTwo = addByX(2);
 
 // CHALLENGE 4
 function once(func) {
-	let counter = 0;
+  let counter = 0;
   let result;
   function inner(val) {
     if(counter === 0) {
@@ -129,11 +129,11 @@ function after(count, func) {
 function rollCall(names) {
   if(Array.isArray(names)) {
     	return (() => {
-				if(!names.length) return 'Everyone accounted for'
-				else return names.shift()
-			})
+	   if(!names.length) return 'Everyone accounted for'
+	   else return names.shift()
+	  })
   	}
-	return -1;
+   return -1;
 }
 
 // // /*** Uncomment these to check your work! ***/
@@ -147,7 +147,7 @@ function rollCall(names) {
 // CHALLENGE 8
 function saveOutput(func, magicWord) {
   let obj = {};
-	return ((val) => {
+  return ((val) => {
     if(val === magicWord) {
       return obj;
     } else {
@@ -167,7 +167,7 @@ function saveOutput(func, magicWord) {
 
 // CHALLENGE 9
 function cycleIterator(array) {
-	let newArr = [];
+  let newArr = [];
   let counter = 0;
   return (() => {
     if(!array.length) {
@@ -194,7 +194,7 @@ function cycleIterator(array) {
 
 // CHALLENGE 10
 function defineFirstArg(func, arg) {
-	return ((...args) => {
+  return ((...args) => {
     return func(arg, ...args)
   })
 }
@@ -208,7 +208,7 @@ function defineFirstArg(func, arg) {
 // CHALLENGE 11
 function dateStamp(func) {
   let obj = {date: "", output: ""};
-	return ((...args) => {
+  return ((...args) => {
     obj["date"] = Date.now();
     obj['output'] = func(...args);
     return obj;
@@ -223,7 +223,7 @@ function dateStamp(func) {
 
 //CHALLENGE 12
 function censor() {
-	let result = {};
+  let result = {};
   function innerFunc(str1, str2) {
     if(arguments.length === 2) {
       result[str1] = str2;
@@ -259,7 +259,7 @@ function createSecretHolder(secret) {
 
 // CHALLENGE 14
 function callTimes() {
-	let counter = 0;
+  let counter = 0;
   return (() => {
     counter++;
     return counter;
@@ -278,9 +278,9 @@ function callTimes() {
 // CHALLENGE 15
 function russianRoulette(num) {
   let count = 1;
-	return (() => {
+  return (() => {
     if(count === num) {
-			count++;
+      count++;
       return 'bang';
     } else if(count < num){
       count++;
@@ -305,7 +305,7 @@ function average() {
   let numbers = [];
   let average = 0;
   
-	return ((num) => {
+  return ((num) => {
     if(num) {
       numbers.push(num);
       average = (numbers.reduce((a, b) => a + b)) / numbers.length;

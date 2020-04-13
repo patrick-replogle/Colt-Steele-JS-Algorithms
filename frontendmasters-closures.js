@@ -328,7 +328,15 @@ function average() {
 
 // CHALLENGE 17
 function makeFuncTester(arrOfTests) {
-  
+   return ((callback) => {
+    for(let i = 0; i < arrOfTests.length; i++) {
+      let arr = arrOfTests;
+      if(callback(arr[i][0]) === arr[i][1]) {
+        return true;
+      }
+      return false;
+    }
+  })
 }
 
 // /*** Uncomment these to check your work! ***/

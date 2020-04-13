@@ -353,19 +353,32 @@ function makeFuncTester(arrOfTests) {
 
 // CHALLENGE 18
 function makeHistory(limit) {
-
+  let result = [];
+	return ((str) => {
+    if(str === 'undo' && result.length) {
+      return result.pop() + ' ' + 'undone';
+    } 
+    if(result.length === 0 && str === 'undo') {
+      return 'nothing to undo';
+    } 
+    if(result.length <= limit) {
+      result.push(str);
+      return str + ' ' + 'done';
+    } 
+  })
 }
 
 // /*** Uncomment these to check your work! ***/
-// const myActions = makeHistory(2);
-// console.log(myActions('jump')); // => should log 'jump done'
-// console.log(myActions('undo')); // => should log 'jump undone'
-// console.log(myActions('walk')); // => should log 'walk done'
-// console.log(myActions('code')); // => should log 'code done'
-// console.log(myActions('pose')); // => should log 'pose done'
-// console.log(myActions('undo')); // => should log 'pose undone'
-// console.log(myActions('undo')); // => should log 'code undone'
-// console.log(myActions('undo')); // => should log 'nothing to undo'
+//const myActions = makeHistory(2);
+//console.log(myActions('jump')); // => should log 'jump done'
+//console.log(myActions('undo')); // => should log 'jump undone'
+//console.log(myActions('walk')); // => should log 'walk done'
+//console.log(myActions('code')); // => should log 'code done'
+//console.log(myActions('pose')); // => should log 'pose done'
+//console.log(myActions('undo')); // => should log 'pose undone'
+//console.log(myActions('undo')); // => should log 'code undone'
+//console.log(myActions('undo')); // => should log 'walk undone'
+//console.log(myActions('undo')); // => should log 'nothing to undo'
 
 
 // CHALLENGE 19

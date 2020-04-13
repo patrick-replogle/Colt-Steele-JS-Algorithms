@@ -246,7 +246,16 @@ function censor() {
 
 // CHALLENGE 13
 function createSecretHolder(secret) {
-
+   let _secret = secret;
+	
+    return {
+        getSecret: function() {
+            return _secret;
+        },
+        setSecret: function(secret) {
+            _secret = secret;
+        }
+    }
 }
 
 // /*** Uncomment these to check your work! ***/

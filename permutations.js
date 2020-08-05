@@ -18,3 +18,20 @@ function permutations(str) {
 }
 
 console.log(permutations('abc'))
+
+
+function permutations(str) {
+  if(str.length <= 2) {
+    if(str.length === 2) {
+      return [str, str[1] + str[0]]
+    } else {
+      return str
+    }
+  }
+  return str
+    .split('')
+    .reduce((acc, letter, i) => 
+            acc.concat(permutations(str.slice(0, i) + str.slice(i + 1)).map(val => val + letter)), [])
+}
+
+console.log(permutations('abc'))
